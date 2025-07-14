@@ -1,4 +1,4 @@
-# Monorepo Picker
+# [WIP] Monorepo Picker
 
 🎯 Interactive monorepo package picker with editor integration
 
@@ -52,13 +52,13 @@ npx monorepo-picker dev
 
 ```bash
 # Interactive selection
-monorepo-picker dev
+picker dev
 
 # Auto-select first package
-monorepo-picker -y build
+picker -y build
 
 # List available packages
-monorepo-picker --list
+picker --list
 ```
 
 ## Configuration
