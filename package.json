@@ -1,0 +1,60 @@
+{
+  "name": "@rizumu/picker",
+  "version": "1.0.0",
+  "description": "Interactive monorepo package picker with editor integration",
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/your-username/monorepo-picker#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/monorepo-picker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/monorepo-picker/issues"
+  },
+  "keywords": ["monorepo", "picker", "cli", "pnpm", "npm", "yarn"],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./cli": {
+      "types": "./dist/cli.d.ts",
+      "default": "./dist/cli.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "picker": "./dist/cli.js"
+  },
+  "files": [
+    "README.md",
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "prepublishOnly": "pnpm run build"
+  },
+  "dependencies": {
+    "execa": "^8.0.1",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/prompts": "^2.4.9",
+    "eslint": "^8.55.0",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  }
+}

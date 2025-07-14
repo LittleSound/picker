@@ -1,0 +1,10 @@
+{
+  "name": "example-2024-02-20",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "echo 'Starting development server for 2024-02-20'",
+    "build": "echo 'Building presentation for 2024-02-20'",
+    "test": "echo 'Running tests for 2024-02-20'"
+  }
+}

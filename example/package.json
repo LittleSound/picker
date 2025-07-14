@@ -1,0 +1,37 @@
+{
+  "name": "monorepo-picker-example",
+  "version": "1.0.0",
+  "description": "Example project demonstrating monorepo-picker usage",
+  "type": "module",
+  "scripts": {
+    "dev": "monorepo-picker dev",
+    "build": "monorepo-picker build",
+    "test": "monorepo-picker test",
+    "quick-dev": "monorepo-picker -y dev",
+    "list": "monorepo-picker --list"
+  },
+  "picker": {
+    "packageManager": "auto",
+    "pattern": "^\\d{4}-\\d{2}-\\d{2}",
+    "scanPath": ".",
+    "workingDirectory": "src",
+    "exclude": ["node_modules", "dist", ".git"],
+    "editor": {
+      "command": "code",
+      "triggers": ["dev"],
+      "filePath": "slides.md",
+      "enabled": true
+    },
+    "packages": {
+      "2024-01-15": {
+        "workingDirectory": ".",
+        "editor": {
+          "filePath": "README.md"
+        }
+      }
+    }
+  },
+  "devDependencies": {
+    "monorepo-picker": "file:.."
+  }
+}
